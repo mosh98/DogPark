@@ -10,8 +10,10 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>HundRastGard</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>HundRastGard</name>
+	<version>hundrast</version>
+	<packaging>war</packaging>
+	<name>HundRast</name>
+
 	<description> Spring Boot project</description>
 
 	<properties>
@@ -53,6 +55,36 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<extensions>
+
+		</extensions>
 	</build>
+
+
+	<repositories>
+		<repository>
+			<id>spring-releases</id>
+			<url>https://repo.spring.io/libs-release</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-releases</id>
+			<url>https://repo.spring.io/libs-release</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>synergian-repo</id>
+			<url>https://raw.github.com/synergian/wagon-git/releases</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>internal.repo</id>
+			<name>Internal repo</name>
+			<url>git@github.com/RazanJaber/DogPark.git</url>
+		</repository>
+	</distributionManagement>
+
 
 </project>

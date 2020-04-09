@@ -8,9 +8,11 @@ public class Location {
 
     @NotBlank
     private long longitude;
+
     @NotBlank
     private long latitude;
 
+    @NotBlank
     private String description;
 
 
@@ -22,6 +24,15 @@ public class Location {
         this.description= description;
     }
 
+    public long getLongitude() {
+        return longitude;
+    }
 
+    public long getLatitude() {
+        return latitude;
+    }
 
+    public String getDescription() {
+        return description;
+    }
 }
