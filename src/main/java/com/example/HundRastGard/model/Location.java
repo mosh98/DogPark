@@ -7,10 +7,10 @@ import javax.validation.constraints.NotBlank;
 public class Location {
 
     @NotBlank
-    private long longitude;
+    private String longitude;
 
     @NotBlank
-    private long latitude;
+    private String latitude;
 
     @NotBlank
     private String description;
@@ -18,17 +18,19 @@ public class Location {
 
 
 
-    public Location(@NotBlank @JsonProperty("longitude") long longitude, @NotBlank @JsonProperty("latitude") long latitude, @JsonProperty("description") String description) {
+    public Location(@NotBlank @JsonProperty("longitude") String longitude,
+                    @NotBlank @JsonProperty("latitude") String latitude,
+                    @JsonProperty("description") String description) {
         this.longitude = longitude;
         this.latitude = latitude;
         this.description= description;
     }
 
-    public long getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public long getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
 

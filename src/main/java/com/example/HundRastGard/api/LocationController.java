@@ -1,7 +1,10 @@
 package com.example.HundRastGard.api;
 
+import com.example.HundRastGard.model.Location;
 import com.example.HundRastGard.service.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,10 +19,12 @@ public class LocationController {
         locationService = ls;
     }
 
-    //Add location @PostMapping
-    public void addLocation(){
-
+    //Add location @PostMappi
+    @PostMapping
+    public void addLocation(@RequestBody Location location) {
+        locationService.addLocation(location);
     }
+
     //Get all Location @GetMapping
 
     //DeletePersonById
