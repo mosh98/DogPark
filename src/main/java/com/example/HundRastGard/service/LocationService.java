@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LocationService {
 
@@ -19,4 +21,9 @@ public class LocationService {
     public int addLocation(Location location){
         return locationDao.insertLocation(location);
     }
+
+    public List<Location> getAllLocation(){
+        return locationDao.selectAllLocation();
+    }
+
 }
