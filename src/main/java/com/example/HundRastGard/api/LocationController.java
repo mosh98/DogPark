@@ -20,7 +20,7 @@ public class LocationController {
         locationService = ls;
     }
 
-    //Add location @PostMappi
+    //Add location
     @PostMapping
     public void addLocation(@Valid @NotNull @RequestBody Location location) {
         locationService.addLocation(location);
